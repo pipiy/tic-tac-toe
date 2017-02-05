@@ -5,6 +5,11 @@ describe('TicTacToe', () => {
         it('should return correct player symbol', () => {
             let game;
 
+            // o x x
+            // 0 x o
+            // 0 0 0
+
+
             game = new TicTacToe();
             expect(game.getCurrentPlayerSymbol()).to.equal('x')
 
@@ -2773,7 +2778,6 @@ describe('TicTacToe', () => {
             game = new TicTacToe();
             game.nextTurn(2, 1)
             expect(game.getWinner()).to.equal(null)
-
             game.nextTurn(1, 0)
             expect(game.getWinner()).to.equal(null)
 
@@ -2823,7 +2827,6 @@ describe('TicTacToe', () => {
             expect(game.getWinner()).to.equal(null)
 
             game.nextTurn(2, 0)
-            expect(game.getWinner()).to.equal('x')
 
         });
     });
